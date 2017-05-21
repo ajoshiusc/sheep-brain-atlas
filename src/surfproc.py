@@ -258,7 +258,7 @@ def reducepatch(surf, ratio=0.90, VERBOSITY=0):
     faces1 = decimatedPoly.GetPolys()
     f1 = faces1.GetData()
     f2 = vtk_to_numpy(f1)
-    f2 = f2.reshape(len(f2)/4,4)
+    f2 = f2.reshape(len(f2)//4,4)
     surf.faces = f2[:, 1:]
 
     return surf
